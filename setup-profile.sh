@@ -12,13 +12,11 @@ fi
 # Install vim dependencies
 sudo apt-get update && sudo apt-get install vim-gui-common
 
-# Create symlinks for bash profile if it doesn't already exist
-if [[ ! -L "$HOME/.profile" ]]; then
-    if [[ -f "$HOME/.profile" ]]; then
-        rm ~/.profile
-    fi
-    ln -s "${PWD}/.profile" ~/.profile
+# Create symlinks for bash profile
+if [[ -f "$HOME/.profile" ]]; then
+    rm ~/.profile
 fi
+ln -s "${PWD}/.profile" ~/.profile
 
 # Make the .vim/colors dir locally if it doesn't exist
 if [[ ! -d "$HOME/.vim/colors" ]]; then
@@ -26,25 +24,19 @@ if [[ ! -d "$HOME/.vim/colors" ]]; then
 fi
 
 # Create a symlink for the vim colors if it doesn't exist
-if [[ ! -L "$HOME/.vim/colors/solarized.vim" ]]; then
-    if [[ -f "$HOME/.vim/colors/solarized.vim" ]]; then
-        rm ~/.vim/colors/solarized.vim
-    fi
-    ln -s "${PWD}/vim-colors-solarized/colors/solarized.vim" ~/.vim/colors/solarized.vim
+if [[ -f "$HOME/.vim/colors/solarized.vim" ]]; then
+    rm ~/.vim/colors/solarized.vim
 fi
+ln -s "${PWD}/vim-colors-solarized/colors/solarized.vim" ~/.vim/colors/solarized.vim
 
-# Create symlinks for bash profile if it doesn't already exist
-if [[ ! -L "$HOME/.vimrc" ]]; then
-    if [[ -f "$HOME/.vimrc" ]]; then
-        rm ~/.vimrc
-    fi
-    ln -s "${PWD}/.vimrc" ~/.vimrc
+# Create symlinks for bash profile
+if [[ -f "$HOME/.vimrc" ]]; then
+    rm ~/.vimrc
 fi
+ln -s "${PWD}/.vimrc" ~/.vimrc
 
-# Create symlinks for gitconfig profile if it doesn't already exist
-if [[ ! -L "$HOME/.gitconfig" ]]; then
-    if [[ -f "$HOME/.gitconfig" ]]; then
-        rm ~/.gitconfig
-    fi
-    ln -s "${PWD}/.gitconfig" ~/.gitconfig
+# Create symlinks for gitconfig profile
+if [[ -f "$HOME/.gitconfig" ]]; then
+    rm ~/.gitconfig
 fi
+ln -s "${PWD}/.gitconfig" ~/.gitconfig
