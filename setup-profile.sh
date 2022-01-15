@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get current working dir of script
+CWD=$(cd `dirname $0` && pwd)
+
 # Clone solarized repos
 if [[ ! -d "$HOME/vim-colors-solarized" ]]; then
     git clone https://github.com/altercation/vim-colors-solarized.git ~/vim-colors-solarized
@@ -16,7 +19,7 @@ sudo apt-get update && sudo apt-get install vim-gui-common
 if [[ -f "$HOME/.profile" ]]; then
     rm ~/.profile
 fi
-ln -s "${PWD}/.profile" ~/.profile
+ln -s "$CWD/.profile" ~/.profile
 
 # Make the .vim/colors dir locally if it doesn't exist
 if [[ ! -d "$HOME/.vim/colors" ]]; then
@@ -33,10 +36,10 @@ ln -s "${PWD}/vim-colors-solarized/colors/solarized.vim" ~/.vim/colors/solarized
 if [[ -f "$HOME/.vimrc" ]]; then
     rm ~/.vimrc
 fi
-ln -s "${PWD}/.vimrc" ~/.vimrc
+ln -s "$CWD/.vimrc" ~/.vimrc
 
 # Create symlinks for gitconfig profile
 if [[ -f "$HOME/.gitconfig" ]]; then
     rm ~/.gitconfig
 fi
-ln -s "${PWD}/.gitconfig" ~/.gitconfig
+ln -s "$CWD/.gitconfig" ~/.gitconfig
