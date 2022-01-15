@@ -30,7 +30,7 @@ fi
 if [[ -f "$HOME/.vim/colors/solarized.vim" ]]; then
     rm ~/.vim/colors/solarized.vim
 fi
-ln -s "${PWD}/vim-colors-solarized/colors/solarized.vim" ~/.vim/colors/solarized.vim
+ln -s ~/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/solarized.vim
 
 # Create symlinks for bash profile
 if [[ -f "$HOME/.vimrc" ]]; then
