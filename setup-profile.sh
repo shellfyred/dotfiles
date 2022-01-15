@@ -13,7 +13,7 @@ if [[ ! -d "$HOME/dircolors-solarized" ]]; then
 fi
 
 # Install any dependencies
-sudo apt-get update && sudo apt-get install vim-gui-common git
+sudo apt-get update && sudo apt-get install vim-gui-common git keychain
 
 # Create symlinks for bash profile
 if [[ -f "$HOME/.profile" || -L "$HOME/.profile" ]]; then
