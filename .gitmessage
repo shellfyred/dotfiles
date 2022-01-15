@@ -1,0 +1,33 @@
+# Title: <type>(<scope>): <subject>
+# Capitalize the subject line, don't end it with a period
+# Type references: 
+#   feat: new feature for the user(or ✨ emoji)
+#   fix: bug fix for the user(or 🚑 emoji)
+#   docs: changes to the documentation(or 📚 emoji)
+#   style: formatting, missing semi colons, etc; no production code change(or 🎨 emoji)
+#   refactor: refactoring production code, eg. renaming a variable(or 🚜 emoji)
+#   test: adding missing tests, refactoring tests; no production code change(or 🔬 emoji)
+#   chore: updating grunt tasks etc; no production code change
+# Scope options: init, runner, watcher, config, web-server, proxy, etc.
+# Scope can be empty, if so drop the parenthesis
+# No more than 50 chars total. 50 chars is here: |
+
+# Remember blank line between title and body.
+
+# Body: Explain *what* and *why* (not *how*). Include task ID (Jira issue).
+# Wrap at 72 chars. ################################## which is here:  |
+
+# Footer: 
+# Reference issues this commit is related to with the status of that Issue; Ex. Issue #27, Ref T27 or Ref T27, T56 or Fixes T8.
+# Supported issue tracker status keywords (Fixes, Fixed, Closes, Closed, Resolves, Resolved, Ref, Issue, Issues)
+# In the case of multiple issues separate them with commas, Ex. Closes #27, #56.
+# Include at least one empty line before it. Format: 
+# Include Co-authored-by for all contributors.
+# Co-authored-by: name <user@users.noreply.github.com>
+#
+
+# Additional references:
+# https://github.com/slashsbin/styleguide-git-commit-message (forked on my repo as well)
+# https://gist.github.com/lisawolderiksen/a7b99d94c92c6671181611be1641c733
+# https://chris.beams.io/posts/git-commit/
+# https://udacity.github.io/git-styleguide/

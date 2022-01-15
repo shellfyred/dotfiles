@@ -43,3 +43,9 @@ if [[ -f "$HOME/.gitconfig" || -L "$HOME/.gitconfig" ]]; then
     rm ~/.gitconfig
 fi
 ln -s "$CWD/.gitconfig" ~/.gitconfig
+
+# Create symlinks for git commit message template
+if [[ -f "$HOME/.gitmessage" || -L "$HOME/.gitmessage" ]]; then
+    rm ~/.gitmessage
+fi
+ln -s "$CWD/.gitmessage" ~/.gitmessage
