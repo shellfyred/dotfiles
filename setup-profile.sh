@@ -16,7 +16,7 @@ fi
 sudo apt-get update && sudo apt-get install vim-gui-common
 
 # Create symlinks for bash profile
-if [[ -f "$HOME/.profile" ]]; then
+if [[ -f "$HOME/.profile" || -L "$HOME/.profile" ]]; then
     rm ~/.profile
 fi
 ln -s "$CWD/.profile" ~/.profile
@@ -27,19 +27,19 @@ if [[ ! -d "$HOME/.vim/colors" ]]; then
 fi
 
 # Create a symlink for the vim colors if it doesn't exist
-if [[ -f "$HOME/.vim/colors/solarized.vim" ]]; then
+if [[ -f "$HOME/.vim/colors/solarized.vim" || -L "$HOME/.vim/colors/solarized.vim" ]]; then
     rm ~/.vim/colors/solarized.vim
 fi
 ln -s ~/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/solarized.vim
 
 # Create symlinks for bash profile
-if [[ -f "$HOME/.vimrc" ]]; then
+if [[ -f "$HOME/.vimrc" || -L "$HOME/.vimrc" ]]; then
     rm ~/.vimrc
 fi
 ln -s "$CWD/.vimrc" ~/.vimrc
 
 # Create symlinks for gitconfig profile
-if [[ -f "$HOME/.gitconfig" ]]; then
+if [[ -f "$HOME/.gitconfig" || -L "$HOME/.gitconfig" ]]; then
     rm ~/.gitconfig
 fi
 ln -s "$CWD/.gitconfig" ~/.gitconfig
